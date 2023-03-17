@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
@@ -14,10 +15,12 @@ namespace Factory.Controllers
     {
       _db = db;
     }
+
     public ActionResult Index()
     {
       return View(_db.Machines.ToList());
     }
+
     public ActionResult Details(int id)
     {
       Machine thisMachine = _db.Machines
@@ -26,6 +29,7 @@ namespace Factory.Controllers
           .FirstOrDefault(machine => machine.MachineId == id);
       return View(thisMachine);
     }
+
     public ActionResult Create()
     {
       return View();
@@ -66,8 +70,9 @@ namespace Factory.Controllers
           EngineerId = engineerId, MachineId = machine.MachineId });
           _db.SaveChanges();
         }
-      return RedirectToAction("Details", new { id = machine.MachineId});
-    }
+        return RedirectToAction("Details", new { id = machine.MachineId});
+      }
+
     public ActionResult Edit(int id)
     {
       Machine thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
@@ -95,7 +100,8 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    [HttpPost]
+
+      [HttpPost]
       public ActionResult DeleteJoin(int joinId)
       {
         EngineerMachine joinEntry = _db.EngineerMachines.FirstOrDefault(entry => entry.EngineerMachineId == joinId);
@@ -103,5 +109,5 @@ namespace Factory.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
       }
+    }
   }
-}
