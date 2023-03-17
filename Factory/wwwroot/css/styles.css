@@ -4,6 +4,37 @@ div#footer {
   left:0px;
   width:100%;
   color:#CCC;
-  background:#333;
+  background:#7D8201;
   padding:8px;
 };
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url("././../Images/shamrock.jpeg"), center no-repeat fixed;
+  background-size: cover;
+  color:rgb(0, 0, 0)000;
+  margin: 20px;
+  padding: 10px;
+}
+
+a:link {
+  color:#CCC;
+}
+
+a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+.fun{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+  border: auto;  
+
+}
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
