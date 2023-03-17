@@ -48,3 +48,7 @@ a:hover {
 .under {
   text-decoration: green wavy underline;
 }
+
+.title {
+  font-variant: small-caps;
+}
