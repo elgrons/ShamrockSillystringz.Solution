@@ -1,8 +1,8 @@
-# _{Application Name}_
+# _Dr. Shamrock Sillystringz's Factory_
 
 #### By Eliot Gronstal
 
-#### _{Brief description of application}_
+#### _A MVC web application for a factory to manage their engineers and the machines they are licensed to fix. Made for Week 11 Epicodus Independent Code Review focusing on many-to-many relationships._
 
 ## Technologies Used
 
@@ -12,7 +12,7 @@
 * _MVC_
 * _SQL Workbench_
 * _Entity Framework_
-* _add here_
+* _CSS_
 
 ## Description
 
@@ -35,7 +35,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 ```json
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=[PROJECT-NAME];uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+        "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
     }
 }
 ```
