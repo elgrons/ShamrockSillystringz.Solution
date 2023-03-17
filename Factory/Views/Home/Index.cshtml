@@ -13,7 +13,7 @@
   <p>No engineers have been added yet.</p>
 } 
 <ul>
-  @foreach (Engineer eng in Model["doctors"])
+  @foreach (Engineer eng in Model["engineers"])
   {
     <li>@Html.ActionLink(@eng.EngineerName, "Details", "Engineers", new { id = @eng.EngineerId})</li>
   }
@@ -25,7 +25,7 @@
   <p>No machines have been added.</p>
 } 
 <ul>
-  @foreach (Machine mach in Model["patients"])
+  @foreach (Machine mach in Model["machines"])
   {
     <li>@Html.ActionLink(@mach.MachineName, "Details", "Machines", new { id = @mach.MachineId})</li>
   }
