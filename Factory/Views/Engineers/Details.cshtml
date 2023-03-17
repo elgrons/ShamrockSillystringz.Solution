@@ -29,7 +29,9 @@ else
   </ul>
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+<p>@Html.ActionLink("Back to list of engineers", "Index")</p>
 
 <p>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</p>
 
