@@ -20,8 +20,7 @@ namespace Factory.Controllers
     {
       return View(_db.Machines.ToList());
     }
-
-    public ActionResult Details(int id)
+      public ActionResult Details(int id)
     {
       Machine thisMachine = _db.Machines
           .Include(machine => machine.JoinEntities)
@@ -38,11 +37,17 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Machine machine)
     {
-      _db.Machines.Add(machine);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      if (!ModelState.IsValid)
+      {
+          return View(machine);
+      }
+      else
+      {
+        _db.Machines.Add(machine);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
     }
-
     public ActionResult AddEngineer(int id)
     {
       Machine thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
