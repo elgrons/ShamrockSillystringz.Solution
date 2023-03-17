@@ -38,17 +38,9 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Machine machine)
     {
-      if (!ModelState.IsValid)
-      {
-          ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
-          return View(machine);
-      }
-      else
-      {
-        _db.Machines.Add(machine);
-        _db.SaveChanges();
-        return RedirectToAction("Index");
-      }
+      _db.Machines.Add(machine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
 
     public ActionResult AddEngineer(int id)
