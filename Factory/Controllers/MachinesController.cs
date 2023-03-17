@@ -35,28 +35,28 @@ namespace Factory.Controllers
       return View();
     }
 
-    [HttpPost]
-    public ActionResult Create(Machine machine)
-    {
-      _db.Machines.Add(machine);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
-
     // [HttpPost]
     // public ActionResult Create(Machine machine)
     // {
-    //   if (!ModelState.IsValid)
-    //   {
-    //       return View(machine);
-    //   }
-    //   else
-    //   {
-    //     _db.Machines.Add(machine);
-    //     _db.SaveChanges();
-    //     return RedirectToAction("Index");
-    //   }
+    //   _db.Machines.Add(machine);
+    //   _db.SaveChanges();
+    //   return RedirectToAction("Index");
     // }
+
+    [HttpPost]
+    public ActionResult Create(Machine machine)
+    {
+      if (!ModelState.IsValid)
+      {
+          return View(machine);
+      }
+      else
+      {
+        _db.Machines.Add(machine);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+    }
   
     public ActionResult AddEngineer(int id)
     {
