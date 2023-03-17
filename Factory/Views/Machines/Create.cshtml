@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h4>Add a new machine</h4>
+
+@using (Html.BeginForm())
+{
+    <p>Machine Name: @Html.TextBoxFor(model => model.MachineName)</p>
+    @* <p>Service Date: @Html.TextBoxFor(model => model.ServiceDate, new { @class = "form-control", type = "date", style = "width: auto;"})</p> *@
+    
+    <input type="submit" value="Add a new machine" class="btn btn-primary" />
+}
+
+<p>@Html.ValidationMessageFor(model => model.MachineId, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
+<p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
+<p>@Html.ActionLink("Show all machines", "Index")</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
