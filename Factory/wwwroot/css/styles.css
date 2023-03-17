@@ -13,8 +13,8 @@ body {
   background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url("././../Images/shamrock.jpeg"), center no-repeat fixed;
   background-size: cover;
   color:rgb(0, 0, 0)000;
-  margin: 20px;
-  padding: 10px;
+  margin: auto;
+  padding: auto;
 }
 
 a:link {
@@ -43,4 +43,8 @@ a:visited {
 a:hover {
   color: rgb(75, 162, 20);
   text-decoration: none;
+}
+
+.under {
+  text-decoration: green wavy underline;
 }
