@@ -38,7 +38,7 @@ namespace Factory.Controllers
     {
       if (!ModelState.IsValid)
       {
-          ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+          ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
           return View(machine);
       }
       else
@@ -57,7 +57,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddDoctor(Machine machine, int engineerId)
+    public ActionResult AddEngineer(Machine machine, int engineerId)
     {
       #nullable enable
       EngineerMachine? joinEntity = _db.EngineerMachines.FirstOrDefault(join => (join.EngineerId == engineerId && join.MachineId == machine.MachineId));
