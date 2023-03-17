@@ -1,9 +1,9 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
@@ -19,7 +19,6 @@ namespace Factory.Controllers
     {
       return View(_db.Machines.ToList());
     }
-
     public ActionResult Details(int id)
     {
       Machine thisMachine = _db.Machines
@@ -30,6 +29,7 @@ namespace Factory.Controllers
     }
     public ActionResult Create()
     {
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
       return View();
     }
 
