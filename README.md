@@ -77,7 +77,7 @@
 
 ## Known Bugs
 
-* 🍀 _No known issues_
+* 🍀 _The Name field for Machine and Enginner cannot be left blank, but no error message pops up becuase I was unable to get the Create function to work AND implement model validation code and get the database to update. If model validation code is implemented into the Create method the database does not accept "new" engineers or machines._
 
 * 🍀 _Please reach out with any questions or concerns to [eliot.lauren@gmail.com](eliot.lauren@gmail.com)_
 
