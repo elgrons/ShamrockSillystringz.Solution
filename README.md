@@ -77,7 +77,7 @@
 
 ## Known Bugs
 
-* 🍀 _When Creating an Engineer or Machine, the `Name` field cannot be left blank, per requirements set in the respective Class models. However, no error message pops up because the Create function does not work when trying to get both the model validation code and get the database updated with a "new" object. If model validation code is implemented into the Create method the database does not accept "new" engineers or machines. The code pertaining to the Create method with model validation is commented out._
+* 🍀 _No known bugs._
 
 * 🍀 _Please reach out with any questions or concerns to [eliot.lauren@gmail.com](eliot.lauren@gmail.com)_
 
