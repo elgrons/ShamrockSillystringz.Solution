@@ -20,4 +20,6 @@
   <input type="submit" value="Save" /><hr>
 }
 
+<p>@Html.ValidationMessageFor(model => model.EngineerName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
 <p>@Html.ActionLink("Back to list", "Index")</p>
