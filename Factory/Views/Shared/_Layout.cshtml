@@ -36,7 +36,9 @@
         </ul>
       </div>
     </nav>
-      @RenderBody()
+      <div id="main-body">
+          @RenderBody()
+          </div>
         </div>
       </div>
       @await Html.PartialAsync("Footer")
