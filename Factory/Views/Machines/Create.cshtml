@@ -8,10 +8,12 @@
 
 @using (Html.BeginForm())
 {
+  <div id="machine-form">
     <p>Machine Name: @Html.TextBoxFor(model => model.MachineName)</p>
-    <p>Service Date: @Html.TextBoxFor(model => model.ServiceDate, new { @class = "form-control", type = "date", style = "width: auto;"})</p>
+    <p>Service Date: @Html.TextBoxFor(model => model.ServiceDate, new { @class = "form-control", type = "date"})</p>
     
-    <input type="submit" value="Add new machine" class="btn btn-primary" />
+    <input type="submit" value="Add new machine" class="btn btn-outline-success" />
+    </div>
 }
 
 <p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>

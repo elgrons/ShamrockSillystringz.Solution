@@ -1,24 +1,19 @@
-div#footer {
-  font-variant: small-caps;
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#7D8201;
-  padding:8px;
-};
 
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-  margin: auto;
-  padding: auto;
-  border: auto;
-  height: auto;
-  overflow: hidden;
+
+body{
+  background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url("././../Images/shamrock.jpeg"), center no-repeat fixed;
   background-size: cover;
-  color: #6E7D67;
+  /* background-repeat: no-repeat; */
+  background-position: center center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  padding: 5%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  max-width: auto;
 }
 
 a:link {
@@ -29,19 +24,6 @@ a:visited {
   color: #115e11;
   text-decoration: none;
   font-weight: bolder;
-}
-
-.fun{
-  background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url("././../Images/shamrock.jpeg"), center no-repeat fixed;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-  margin: auto;
-  padding: auto;
-  border: auto;
-  height: auto;
-  overflow: hidden;
-  background-size: cover;
-  color: #6E7D67;
 }
 
 a:hover {
@@ -55,4 +37,27 @@ a:hover {
 
 .title {
   font-variant: small-caps;
+}
+
+#machine-form {
+  align-items: center;
+  flex-direction: column;
+}
+
+div#footer {
+  font-variant: small-caps;
+  font-size: 1rem;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#7D8201;
+  padding:8px;
+};
+
+@media (max-width: 600px) {
+  body {
+    padding: 3%;
+  }
 }

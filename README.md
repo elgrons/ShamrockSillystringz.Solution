@@ -2,7 +2,7 @@
 
 #### 🍀 By Eliot Gronstal 3.17.23 🍀
 
-#### _A MVC web application for a factory to manage their engineers and the machines they are licensed to fix. Made for Week 11 Epicodus Independent Code Review focusing on many-to-many relationships._
+#### _A MVC web application for a factory to manage their engineers and the machines they are licensed to fix. Made for Epicodus Independent Code Review focusing on many-to-many relationships._
 
 ## Technologies Used 
 
