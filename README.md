@@ -2,17 +2,20 @@
 
 #### 🍀 By Eliot Gronstal 3.17.23 🍀
 
+![ShamrockSillystringz](ShamrockSillystringzFactory.png)
+
 #### _A MVC web application for a factory to manage their engineers and the machines they are licensed to fix. Made for Epicodus Independent Code Review focusing on many-to-many relationships._
 
 ## Technologies Used 
 
 * 🏭 _C#_
-* 🏭 _.NET_
-* 🏭 _HTML_
+* 🏭 _.NET Core 6.0_
+* 🏭 _VS Code_
+* 🏭 _HTML/CSS_
 * 🏭 _MVC_
 * 🏭 _SQL Workbench_
 * 🏭 _Entity Framework_
-* 🏭 _CSS_
+* 🏭 _Git/GitHub_
 
 ## Description
 
